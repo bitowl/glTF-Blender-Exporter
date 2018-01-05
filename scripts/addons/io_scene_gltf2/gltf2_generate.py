@@ -2598,14 +2598,24 @@ def generate_materials(operator,
                         #
                         # Specular shininess texture
                         #
-                        if blender_texture_slot.use_map_color_spec:
+                        if blender_texture_slot.use_map_specular:
                             index = get_texture_index_by_filepath(export_settings, glTF,
                                                                   blender_texture_slot.texture.image.filepath)
                             if index >= 0:
-                                specularShininessTexture = {
+                                specularTexture = {
                                     'index': index
                                 }
-                                common['specularShininessTexture'] = specularShininessTexture
+                                common['specularTexture'] = specularTexture
+                                
+                        if blender_texture_slot.use_map_hardness:
+                            index = get_texture_index_by_filepath(export_settings, glTF,
+                                                                  blender_texture_slot.texture.image.filepath)
+                            print("shininess");
+                            if index >= 0:
+                                shininessTexture = {
+                                    'index': index
+                                }
+                                common['shininessTexture'] = shininessTexture                       
                         #
                         # Ambient texture
                         #

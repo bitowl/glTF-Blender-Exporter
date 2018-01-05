@@ -229,6 +229,10 @@ def filter_apply(export_settings):
                                 accept = True
                             if blender_texture_slot.use_map_color_spec:
                                 accept = True
+                            if blender_texture_slot.use_map_specular:
+                                accept = True
+                            if blender_texture_slot.use_map_hardness:
+                                accept = True
     
                             if blender_texture_slot.use_map_ambient:
                                 accept = True

@@ -255,7 +255,7 @@ class ExportGLTF2_Base():
     export_common = BoolProperty(
             name='Export KHR_materials_cmnBlinnPhong',
             description='',
-            default=False
+            default=True
     )
 
     export_displacement = BoolProperty(
