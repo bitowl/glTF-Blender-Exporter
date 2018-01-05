@@ -195,13 +195,13 @@ class ExportGLTF2_Base():
     export_move_keyframes = BoolProperty(
             name='Keyframes start with 0',
             description='',
-            default=True
+            default=False
     )
 
     export_force_sampling = BoolProperty(
             name='Force sample animations',
             description='',
-            default=False
+            default=True
     )
 
     export_current_frame = BoolProperty(
